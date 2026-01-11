@@ -22,6 +22,28 @@ npm start
 
 ---
 
+## 🛠 トラブルシューティング
+
+もし `npm start` でエラー（`Cannot find module 'body-parser'` など）が出る場合は、以下のコマンドを順番に試してください。
+
+### 1. 不足しているパッケージをインストール
+```bash
+npm install body-parser
+```
+
+### 2. クリーンインストール（上記で解決しない場合）
+npmのキャッシュや不整合を解消するために、一度リセットしてインストールし直します。
+```bash
+rm -rf node_modules package-lock.json && npm install
+```
+
+### 3. 再度起動
+```bash
+npm start
+```
+
+---
+
 ## 🛠 デプロイ手順
 
 ### 1. Remix (Fork)
